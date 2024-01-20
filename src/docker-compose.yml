@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  # Serviço de Controle de Lançamentos
+  controle-lancamentos:
+    image: sua-imagem-controle-lancamentos:latest
+    container_name: controle-lancamentos
+    ports:
+      - "5000:80"  # Ajuste a porta conforme necessário
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=controle-lancamentos-db;Port=5432;Database=controle_lancamentos_db;Username=admin;Password=pass
+      - RabbitMQ__Host=rabbitmq
+    depends_on:
+      - controle-lancamentos-db
+      - rabbitmq
+
+  # Banco de Dados para Controle de Lançamentos
+  controle-lancamentos-db:
+    image: postgres:latest
+    container_name: controle-lancamentos-db
+    environment:
+      - POSTGRES_DB=controle_lancamentos_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=pass
+
+  # Serviço de Consolidado Diário
+  consolidado-diario:
+    image: sua-imagem-consolidado-diario:latest
+    container_name: consolidado-diario
+    ports:
+      - "5001:80"  # Ajuste a porta conforme necessário
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Host=consolidado-diario-db;Port=5432;Database=consolidado_diario_db;Username=admin;Password=pass
+      - RabbitMQ__Host=rabbitmq
+    depends_on:
+      - consolidado-diario-db
+      - rabbitmq
+
+  # Banco de Dados para Consolidado Diário
+  consolidado-diario-db:
+    image: postgres:latest
+    container_name: consolidado-diario-db
+    environment:
+      - POSTGRES_DB=consolidado_diario_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=pass
+
+  # Serviço RabbitMQ
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"  # Porta para comunicação AMQP
+      - "15672:15672"  # Porta para interface de gerenciamento
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=pass

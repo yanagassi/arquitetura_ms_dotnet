@@ -1,4 +1,43 @@
 ﻿<Properties StartupConfiguration="{B011B973-7857-4BD2-885B-9860748C8F3A}|Default">
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Autenticacao FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="../../../Autenticacao/Program.cs" line="10" column="4" endLine="11" endColumn="66" offsetX="-1" offsetY="-1" expression="connectionString" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Autenticacao PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Autenticacao/Controllers/AutenticacaoController.cs">
+    <Files>
+      <File FileName="Autenticacao/Controllers/AutenticacaoController.cs" Line="17" Column="4" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Autenticacao" expanded="True">
+            <Node name="Autenticacao">
+              <Node name="Controllers" expanded="True">
+                <Node name="AutenticacaoController.cs" selected="True" />
+              </Node>
+              <Node name="Migrations" expanded="True" />
+            </Node>
+            <Node name="Autenticacao.Domain">
+              <Node name="Repositories" expanded="True" />
+              <Node name="ServiceInterfaces" expanded="True" />
+              <Node name="Services" expanded="True" />
+            </Node>
+            <Node name="Autenticacao.Infrastructure" expanded="True">
+              <Node name="Repositories" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>connectionString</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

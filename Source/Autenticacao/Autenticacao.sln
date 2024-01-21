@@ -5,6 +5,10 @@ VisualStudioVersion = 25.0.1700.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao", "Autenticacao\Autenticacao.csproj", "{B011B973-7857-4BD2-885B-9860748C8F3A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao.Infrastructure", "Autenticacao.Infrastructure\Autenticacao.Infrastructure.csproj", "{3382B6F5-37FA-4265-9B89-BBE9C91701BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao.Domain", "Autenticacao.Domain\Autenticacao.Domain.csproj", "{6CD4070F-0BE9-42FC-B5A4-39224140BACC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +19,21 @@ Global
 		{B011B973-7857-4BD2-885B-9860748C8F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B011B973-7857-4BD2-885B-9860748C8F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B011B973-7857-4BD2-885B-9860748C8F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3382B6F5-37FA-4265-9B89-BBE9C91701BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3382B6F5-37FA-4265-9B89-BBE9C91701BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3382B6F5-37FA-4265-9B89-BBE9C91701BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3382B6F5-37FA-4265-9B89-BBE9C91701BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3958296E-5EC1-472F-A76F-8108BC5BF8F2}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,12 @@
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.csproj.AssemblyReference.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.AssemblyInfoInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.AssemblyInfo.cs
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.csproj.CoreCompileInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/bin/Debug/net6.0/Autenticacao.Domain.deps.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/bin/Debug/net6.0/Autenticacao.Domain.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/bin/Debug/net6.0/Autenticacao.Domain.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/refint/Autenticacao.Domain.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/Autenticacao.Domain.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Domain/obj/Debug/net6.0/ref/Autenticacao.Domain.dll

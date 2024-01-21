@@ -1,0 +1,15 @@
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.csproj.AssemblyReference.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.AssemblyInfoInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.AssemblyInfo.cs
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/bin/Debug/net6.0/Autenticacao.Infrastructure.deps.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/bin/Debug/net6.0/Autenticacao.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/bin/Debug/net6.0/Autenticacao.Infrastructure.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/bin/Debug/net6.0/Autenticacao.Domain.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/bin/Debug/net6.0/Autenticacao.Domain.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.csproj.CopyComplete
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/refint/Autenticacao.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/Autenticacao.Infrastructure.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao.Infrastructure/obj/Debug/net6.0/ref/Autenticacao.Infrastructure.dll

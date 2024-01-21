@@ -1,29 +1,43 @@
 ﻿<Properties StartupConfiguration="{BCB1C792-FC50-4BAF-8DEA-849D88544E34}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="ControleDeLancamentos/Controllers/WeatherForecastController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ControleDeLancamentos/Program.cs">
     <Files>
-      <File FileName="ControleDeLancamentos/Controllers/WeatherForecastController.cs" Line="32" Column="2" />
+      <File FileName="ControleDeLancamentos/Program.cs" Line="20" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ControleDeLancamentos" expanded="True">
-            <Node name="ControleDeLancamentos" expanded="True">
-              <Node name="ConnectedServicesFolder" selected="True" />
+            <Node name="ControleDeLancamentos">
               <Node name="Controllers" expanded="True" />
+              <Node name="DTOs" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="ControleDeLancamentos.Domain">
+              <Node name="Entities" expanded="True" />
+              <Node name="Repositories" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="ServicesInterfaces" expanded="True" />
+            </Node>
+            <Node name="ControleDeLancamentos.Infrastructure">
+              <Node name="DbContexts" expanded="True" />
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>connectionString</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ControleDeLancamentos PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ControleDeLancamentos PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

@@ -15,4 +15,4 @@ COPY --from=build /app/publish .
 
 EXPOSE 80
 
-ENTRYPOINT ["dotnet", "ControleDeLancamentos.dll"]
+ENTRYPOINT ["dotnet", "ControleDeLancamentos.dll", "--migrate"] 

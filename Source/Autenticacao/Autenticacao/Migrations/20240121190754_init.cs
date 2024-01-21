@@ -27,7 +27,7 @@ namespace Autenticacao.Migrations
                  table: "Usuarios",
                  columns: new[] { "Id", "Nome", "Email", "SenhaHash" },
                  values: new object[] {
-                     Guid.NewGuid(),
+                     Guid.Parse("7f6aeedf-b6ac-45a2-ba3f-3596123ffef5"),
                      "Administrador",
                      "admin@admin.com",
                      BCrypt.Net.BCrypt.HashPassword("admin")

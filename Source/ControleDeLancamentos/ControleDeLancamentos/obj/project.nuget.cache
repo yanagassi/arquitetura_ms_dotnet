@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "4mTA1KTkBKwtpOsxkXe/tlUeTZPaR1BgTr991YOelZ1lnt+lmacxSxsju0gXW5Rl23SGTnfgAUwBv3IapuhYuQ==",
+  "success": true,
+  "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/ControleDeLancamentos/ControleDeLancamentos/ControleDeLancamentos.csproj",
+  "expectedPackageFiles": [
+    "/Users/yanesteves/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

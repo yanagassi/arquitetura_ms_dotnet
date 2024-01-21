@@ -1,0 +1,54 @@
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/appsettings.Development.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/appsettings.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.deps.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.runtimeconfig.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.pdb
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.AssemblyReference.cache
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.AssemblyInfoInputs.cache
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.AssemblyInfo.cs
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.CoreCompileInputs.cache
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.MvcApplicationPartsAssemblyInfo.cs
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.MvcApplicationPartsAssemblyInfo.cache
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/staticwebassets.build.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/staticwebassets.development.json
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/scopedcss/bundle/ConsolidadoDiario.styles.css
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.CopyComplete
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/refint/ConsolidadoDiario.dll
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.pdb
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.genruntimeconfig.cache
+/Users/yanesteves/Projects/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ref/ConsolidadoDiario.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/appsettings.Development.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/appsettings.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.deps.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.runtimeconfig.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/ConsolidadoDiario.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.AssemblyReference.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.AssemblyInfoInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.AssemblyInfo.cs
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.CoreCompileInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.MvcApplicationPartsAssemblyInfo.cs
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.MvcApplicationPartsAssemblyInfo.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/staticwebassets.build.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/staticwebassets.development.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/scopedcss/bundle/ConsolidadoDiario.styles.css
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.csproj.CopyComplete
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/refint/ConsolidadoDiario.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ConsolidadoDiario.genruntimeconfig.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/obj/Debug/net6.0/ref/ConsolidadoDiario.dll

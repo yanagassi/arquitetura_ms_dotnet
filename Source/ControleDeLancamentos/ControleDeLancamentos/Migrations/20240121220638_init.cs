@@ -55,7 +55,7 @@ namespace ControleDeLancamentos.Migrations
             migrationBuilder.InsertData(
                     table: "ContasBancarias",
                     columns: new[] { "Id", "UserId", "Nome", "Saldo" },
-                    values: new object[] { Guid.NewGuid(), Guid.Parse("7f6aeedf-b6ac-45a2-ba3f-3596123ffef5"), "Conta A", 1000.0m });
+                    values: new object[] { Guid.Parse("89bc5c51-016e-4d57-a6bd-f884dedf98a8"), Guid.Parse("7f6aeedf-b6ac-45a2-ba3f-3596123ffef5"), "Conta A", 1000.0m });
 
         }
 

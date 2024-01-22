@@ -1,15 +1,32 @@
 {
   "version": 2,
-  "dgSpecHash": "Lj8OC2xxlujwvk/0utMhFotbveGqiDlxSJ8nNm75jyPIsSmMKC2+eC+ulxZByAGeLHgFPpOasUbJDrNvtoIFeQ==",
+  "dgSpecHash": "8NtYjoaZiOYyS+MrWT0JTynJTpbmvvYqh5Ss0GLBa2A8J9CvhSY3nejI285vgbm1fngKrWkgahPWwH0aLTsVZw==",
   "success": true,
   "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/ConsolidadoDiario.csproj",
   "expectedPackageFiles": [
     "/Users/yanesteves/.nuget/packages/microsoft.extensions.apidescription.server/3.0.0/microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/rabbitmq.client/3.6.9/rabbitmq.client.3.6.9.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/stackexchange.redis/2.7.17/stackexchange.redis.2.7.17.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "O pacote 'RabbitMQ.Client 3.6.9' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
+      "libraryId": "RabbitMQ.Client",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

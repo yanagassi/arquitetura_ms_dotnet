@@ -25,7 +25,9 @@ builder.Services.AddScoped<IContaBancariaRepository, ContaBancariaRepository>();
 
 # region Services
 builder.Services.AddScoped<IServicoControleLancamentos, ServicoControleLancamentos>();
+builder.Services.AddScoped<IRabbitMqService, RabbitMqService>();
 # endregion
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

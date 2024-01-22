@@ -1,31 +1,35 @@
-﻿using Microsoft.AspNetCore.HttpLogging;
+﻿
+using ConsolidadoDiario.Domain.Services;
+using Microsoft.Extensions.DependencyInjection;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddHttpLogging(logging =>
-{
-    logging.LoggingFields = HttpLoggingFields.All;
-    logging.RequestHeaders.Add("sec-ch-ua");
-    logging.ResponseHeaders.Add("MyResponseHeader");
-    logging.MediaTypeOptions.AddText("application/javascript");
-    logging.RequestBodyLogLimit = 4096;
-    logging.ResponseBodyLogLimit = 4096;
-});
-
-
+ 
+ 
 builder.Services.AddControllers();
+ 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+var connStrRedis = Environment.GetEnvironmentVariable("REDIS_HOST") ??
+    builder.Configuration["RedisHost"];
+
+
+var redisConnectionMultiplexer = ConnectionMultiplexer.Connect(connStrRedis);
+builder.Services.AddSingleton(redisConnectionMultiplexer);
+
+builder.Services.AddSingleton<RedisCacheService>();
+
+
+
+builder.Services.AddHostedService<RabbitMQWorker>();
+
+
 var app = builder.Build();
 
-
-
-// Configure the HTTP request pipeline. 
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpLogging();

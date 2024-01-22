@@ -1,0 +1,34 @@
+# Created by https://www.toptal.com/developers/gitignore/api/redis,dotnetcore,react
+# Edit at https://www.toptal.com/developers/gitignore?templates=redis,dotnetcore,react
+
+### DotnetCore ###
+# .NET Core build folders
+bin/
+obj/
+
+# Common node modules locations
+/node_modules
+/wwwroot/node_modules
+
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### Redis ###
+# Ignore redis binary dump (dump.rdb) files
+
+*.rdb
+
+# End of https://www.toptal.com/developers/gitignore/api/redis,dotnetcore,react

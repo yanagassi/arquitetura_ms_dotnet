@@ -2,50 +2,24 @@ import React, { useState } from "react";
 
 import Helper from "../helpers/Helper";
 import { NumericFormat } from "react-number-format";
+import LancamentosService from "../services/LancamentosService";
+import { useApi } from "../context/ApiContext";
 
 function Lancamentos() {
+  const { user } = useApi();
+
   const [formData, setFormData] = useState({
     data: Helper.getCurrentDate(),
     descricao: "",
     tipo: "debito",
     valor: 0,
-    categoria: "",
-    meioPagamento: "",
-    observacoes: "",
-    conta: "Conta A",
+    contaId: "89bc5c51-016e-4d57-a6bd-f884dedf98a8",
   });
-
-  const categoriasPorTipo = {
-    debito: [
-      "Compras de Estoques",
-      "Despesas Operacionais",
-      "Pagamentos a Fornecedores",
-      "Investimentos",
-      "Empréstimos e Financiamentos",
-      "Impostos",
-      "Retiradas do Proprietário",
-      "Outras Despesas",
-    ],
-    credito: [
-      "Vendas",
-      "Recebimentos de Clientes",
-      "Investimentos",
-      "Empréstimos",
-      "Outras Receitas",
-    ],
-  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "tipo") {
-      setFormData({
-        ...formData,
-        [name]: value,
-        categoria: categoriasPorTipo[value][0], // Define a primeira categoria por padrão
-      });
-    } else if (name === "valor") {
-      // Remove caracteres não numéricos e converte para número
+    if (name === "valor") {
       const numericValue = parseFloat(value.replace(/[^0-9.-]/g, ""));
 
       setFormData({
@@ -60,34 +34,44 @@ function Lancamentos() {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Lógica para lidar com o envio do formulário (por exemplo, salvar os dados no estado global, enviar para um servidor, etc.)
-    console.log(formData);
+
+    try {
+      const lancamentoAdicionado = await LancamentosService.adicionarLancamento(
+        {
+          ...formData,
+          userId: user?.nameidentifier,
+          data: new Date(formData.data).toISOString(),
+        }
+      );
+      console.log("Lançamento adicionado com sucesso:", lancamentoAdicionado);
+    } catch (error) {
+      console.error("Erro ao adicionar lançamento:", error);
+    }
   };
 
   return (
     <div className="container mx-auto p-14 pt-0">
       <form onSubmit={handleSubmit} className="">
         <h2 className="text-2xl font-semibold mb-8">Lançamentos</h2>
-
+        <div className="mb-4">
+          <label
+            htmlFor="descricao"
+            className="block text-sm font-medium text-gray-600"
+          >
+            Descrição *
+          </label>
+          <input
+            type="text"
+            id="descricao"
+            name="descricao"
+            value={formData.descricao}
+            onChange={handleChange}
+            className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-          <div className="mb-4">
-            <label
-              htmlFor="descricao"
-              className="block text-sm font-medium text-gray-600"
-            >
-              Descrição *
-            </label>
-            <input
-              type="text"
-              id="descricao"
-              name="descricao"
-              value={formData.descricao}
-              onChange={handleChange}
-              className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
-            />
-          </div>
           <div className="mb-4">
             <label
               htmlFor="data"
@@ -155,9 +139,9 @@ function Lancamentos() {
               Conta *
             </label>
             <select
-              id="conta"
-              name="conta"
-              value={formData.conta}
+              id="contaId"
+              name="contaId"
+              value={formData.contaId}
               required={true}
               onChange={handleChange}
               className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
@@ -166,43 +150,6 @@ function Lancamentos() {
               <option value="Conta B">Conta B</option>
             </select>
           </div>
-          <div className="mb-4">
-            <label
-              htmlFor="categoria"
-              className="block text-sm font-medium text-gray-600"
-            >
-              Categoria *
-            </label>
-            <select
-              id="categoria"
-              name="categoria"
-              value={formData.categoria}
-              onChange={handleChange}
-              className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
-            >
-              {categoriasPorTipo[formData.tipo].map((categoria) => (
-                <option key={categoria} value={categoria}>
-                  {categoria}
-                </option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        <div className="mb-4 col-span-2">
-          <label
-            htmlFor="observacoes"
-            className="block text-sm font-medium text-gray-600"
-          >
-            Observações
-          </label>
-          <textarea
-            id="observacoes"
-            name="observacoes"
-            value={formData.observacoes}
-            onChange={handleChange}
-            className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
-          />
         </div>
 
         <div className="mt-6 w-full flex justify-end">

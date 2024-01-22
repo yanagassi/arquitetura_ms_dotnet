@@ -1,28 +1,48 @@
 ﻿<Properties StartupConfiguration="{2CD3B945-B33B-4A78-9844-E065FF9BE64A}|Default">
-  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConsolidadoDiario/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConsolidadoDiario.Domain/Services/RedisCacheService.cs">
     <Files>
-      <File FileName="ConsolidadoDiario/Program.cs" Line="30" Column="18" />
-      <File FileName="ConsolidadoDiario/Controllers/WeatherForecastController.cs" />
+      <File FileName="ConsolidadoDiario/Program.cs" Line="23" Column="1" />
+      <File FileName="ConsolidadoDiario/Controllers/ConsolidadoController.cs" Line="27" Column="77" />
+      <File FileName="ConsolidadoDiario.Domain/Services/RedisCacheService.cs" Line="70" Column="81" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ConsolidadoDiario" expanded="True">
-            <Node name="ConsolidadoDiario" expanded="True">
+          <Node name="ConsolidadoDiario">
+            <Node name="ConsolidadoDiario">
               <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="Workers" expanded="True" />
+            </Node>
+            <Node name="ConsolidadoDiario.Domain">
+              <Node name="Entities" expanded="True" />
+              <Node name="Services" expanded="True">
+                <Node name="RedisCacheService.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="ConsolidadoDiario.Infrastructure" expanded="True">
+              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>connectionString</Value>
+          <Value>message</Value>
+          <Value>redisKey</Value>
+          <Value>serializedLancamento</Value>
+          <Value>entry</Value>
+          <Value>lancamentos</Value>
+          <Value>genericData</Value>
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

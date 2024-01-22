@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "4qmYNdow1lHgb8Bne3d3LykjPYTYUhGh2NiUUHn7ouoi3169ZbFCy2MMzbPpXh6rP2z0QYSCzAuehUrBNuaH9g==",
+  "success": true,
+  "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Domain/ConsolidadoDiario.Domain.csproj",
+  "expectedPackageFiles": [
+    "/Users/yanesteves/.nuget/packages/microsoft.extensions.logging.abstractions/6.0.0/microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/stackexchange.redis/2.7.17/stackexchange.redis.2.7.17.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/system.io.pipelines/5.0.1/system.io.pipelines.5.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

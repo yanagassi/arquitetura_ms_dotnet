@@ -8,6 +8,25 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="RabbitMQ.Client" Version="3.6.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Workers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Workers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConsolidadoDiario.Infrastructure\ConsolidadoDiario.Infrastructure.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\ConsolidadoDiario.Domain\ConsolidadoDiario.Domain.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="DTOs\LancamentoDTO.cs" />
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+  </ItemGroup>
 </Project>

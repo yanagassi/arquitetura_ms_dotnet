@@ -1,11 +1,5 @@
 ﻿<Properties StartupConfiguration="{2CD3B945-B33B-4A78-9844-E065FF9BE64A}|Default">
-  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="ConsolidadoDiario/Program.cs">
     <Files>
       <File FileName="ConsolidadoDiario/Program.cs" Line="30" Column="18" />
@@ -25,4 +19,10 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario.Domain FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario.Infrastructure FirstBuild="True" />
 </Properties>

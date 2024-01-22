@@ -1,0 +1,12 @@
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/bin/Debug/net6.0/ConsolidadoDiario.Infrastructure.deps.json
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/bin/Debug/net6.0/ConsolidadoDiario.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/bin/Debug/net6.0/ConsolidadoDiario.Infrastructure.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.csproj.AssemblyReference.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.AssemblyInfoInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.AssemblyInfo.cs
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/refint/ConsolidadoDiario.Infrastructure.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ConsolidadoDiario.Infrastructure.pdb
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario.Infrastructure/obj/Debug/net6.0/ref/ConsolidadoDiario.Infrastructure.dll

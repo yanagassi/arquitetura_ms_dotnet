@@ -7,17 +7,19 @@ namespace Autenticacao.Controllers
     [Route("[controller]")]
     public class AutenticacaoController : ControllerBase
     {
-        public readonly IServicoAutenticacao _servicoAutenticacao;
+        private readonly IServicoAutenticacao _servicoAutenticacao;
         public AutenticacaoController(IServicoAutenticacao servicoAutenticacao)
         {
             _servicoAutenticacao = servicoAutenticacao;
         }
 
         [HttpGet]
-           public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index()
         {
             return Ok("Running!");
         }
+
+
 
         [HttpPost]
         public async Task<IActionResult> LoginAsync([FromBody] LoginRequestDto request)
@@ -35,8 +37,8 @@ namespace Autenticacao.Controllers
             {
                 return Unauthorized("Credenciais inválidas");
             }
-             
-            var token = _servicoAutenticacao.GerarTokenJwt(usuario); 
+
+            var token = _servicoAutenticacao.GerarTokenJwt(usuario);
             return Ok(new { Token = token });
 
         }

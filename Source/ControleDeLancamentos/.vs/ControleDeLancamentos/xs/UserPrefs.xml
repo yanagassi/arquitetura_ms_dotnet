@@ -1,28 +1,20 @@
 ﻿<Properties StartupConfiguration="{BCB1C792-FC50-4BAF-8DEA-849D88544E34}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ControleDeLancamentos/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ControleDeLancamentos/appsettings.json">
     <Files>
-      <File FileName="ControleDeLancamentos/Program.cs" Line="20" Column="1" />
+      <File FileName="ControleDeLancamentos/Program.cs" Line="1" Column="1" />
+      <File FileName="ControleDeLancamentos/appsettings.json" Line="15" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ControleDeLancamentos" expanded="True">
             <Node name="ControleDeLancamentos">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DTOs" expanded="True" />
-              <Node name="Migrations" expanded="True" />
-              <Node name="Program.cs" selected="True" />
+              <Node name="appsettings.json" selected="True" />
             </Node>
             <Node name="ControleDeLancamentos.Domain">
-              <Node name="Entities" expanded="True" />
-              <Node name="Repositories" expanded="True" />
               <Node name="Services" expanded="True" />
               <Node name="ServicesInterfaces" expanded="True" />
-            </Node>
-            <Node name="ControleDeLancamentos.Infrastructure">
-              <Node name="DbContexts" expanded="True" />
-              <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
         </State>

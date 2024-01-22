@@ -27,6 +27,10 @@ services:
       - rabbitmq
     environment:
       - DB_STRING_CONNECTION=Host=controle-lancamentos-db;Port=5432;Database=controle_lancamentos_db;Username=admin;Password=pass;
+      - RABBITMQ_DEFAULT_HOST=rabbitmq
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=pass
+      - RABBITMQ_DEFAULT_QUEUE_NAME=lancamentos_queue
 
 
   controle-lancamentos-db:
@@ -52,12 +56,17 @@ services:
       - consolidado-report-redis
       - rabbitmq
     environment:
-      - REDIS_HOST=consolidado-report-redis
-      - REDIS_PORT=6379
+      - REDIS_HOST=consolidado-report-redis:6379 
+      - RABBITMQ_DEFAULT_HOST=rabbitmq
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=pass
+      - RABBITMQ_DEFAULT_QUEUE_NAME=lancamentos_queue
 
   consolidado-report-redis:
     image: "redis:latest"
     container_name: consolidado-report-redis
+    networks:
+      - gateway-network
     ports:
       - "6379:6379"
 
@@ -91,6 +100,8 @@ services:
   rabbitmq:
     image: "rabbitmq:3-management"
     container_name: rabbitmq
+    networks:
+      - gateway-network
     ports:
       - "5672:5672"
       - "15672:15672"

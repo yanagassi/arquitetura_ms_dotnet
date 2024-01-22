@@ -9,14 +9,15 @@ import HeaderPage from "../components/HeaderPage";
 
 function MeusLancamentos() {
   const [dados, setDados] = useState([]);
-
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
-
   const [contas, setContas] = useState([]);
   const [contaSelect, setContaSelect] = useState("");
-
   const { setLoad, user } = useApi();
+
+  const obterDetalhes = async (id) => {
+    setDados(await ConsolidadoService.obterDetalhesConsolidados(id));
+  };
 
   const obterContas = async () => {
     if (user?.nameidentifier) {
@@ -31,26 +32,28 @@ function MeusLancamentos() {
 
   useEffect(() => {
     inicializar();
-  }, [user?.nameidentifier]);
+  }, [user?.nameidentifier, window.location.href]);
 
   async function inicializar() {
     setLoad(true);
-    handleAutoFill(30);
-    const resContas = await obterContas();
-    if (resContas && resContas.length > 0) {
-      setContaSelect(resContas[0].id);
-
-      await handleSearch(resContas[0].id);
+    const res = await obterContas();
+    if (res && res.length > 0) {
+      await ConsolidadoService.obterDetalhesConsolidadosPorData(
+        res[0].id,
+        startDate,
+        endDate
+      );
+      setContaSelect(res[0].id);
+      obterDetalhes(res[0].id);
     }
     setLoad(false);
   }
 
-  const handleSearch = async (accountId = null) => {
+  const handleSearch = async () => {
     setLoad(true);
-
     const detalhesConsolidados =
-      await ConsolidadoService.obterSaldoConsolidadoPorData(
-        typeof accountId === "string" ? accountId : contaSelect,
+      await ConsolidadoService.obterDetalhesConsolidadosPorData(
+        contaSelect,
         startDate,
         endDate
       );
@@ -67,26 +70,55 @@ function MeusLancamentos() {
 
   const tableColumns = [
     {
-      key: "lancamentos",
-      label: "Nº Transações Diarias",
-      className: "text-start pl-8 font-semibold  w-4",
-      component: ({ lancamentos }) => <span>{lancamentos?.length ?? 0}</span>,
+      key: "Id",
+      label: "Cod. Identificação",
+      className: "text-cente w-2",
+      component: ({ id }) => (
+        <span title={id} alt={id}>
+          {id.substr(0, 8)}...
+        </span>
+      ),
     },
     {
-      key: "totalValue",
-      label: "Valor Total do Dia",
-      className: "text-center  ",
-      component: ({ totalValue, tipo }) => (
-        <span>{Helper.formatMoney(totalValue)}</span>
+      key: "descricao",
+      label: "Descrição",
+      className: "text-start pl-8 font-semibold",
+    },
+    {
+      key: "valor",
+      label: "Valor do Lançamento",
+      className: "text-center w-[200px]",
+      component: ({ valor, tipo }) => (
+        <span
+          className={`text-md font-semibold ${
+            tipo === "1" ? "text-red-600" : "text-green-600"
+          }`}
+        >
+          {Helper.formatMoney(valor)}
+        </span>
+      ),
+    },
+    {
+      key: "tipo",
+      label: "Tipo do lançamento",
+      className: "text-center w-[200px]",
+      component: ({ tipo }) => (
+        <span
+          className={`text-md font-semibold ${
+            tipo === "1" ? "text-red-600" : "text-green-600"
+          }`}
+        >
+          {Helper.getTypeCreditOrDebit(tipo)}
+        </span>
       ),
     },
 
     {
-      key: "date",
+      key: "data",
       label: "Data",
-      className: "text-center",
-      component: ({ date }) => (
-        <span className="font-semibold">{Helper.formatDateColumn(date)}</span>
+      className: "text-center w-[200px]",
+      component: ({ data }) => (
+        <span className="font-semibold">{Helper.formatDateColumn(data)}</span>
       ),
     },
   ];
@@ -95,10 +127,9 @@ function MeusLancamentos() {
     <div className="flex flex-center justify-center">
       <div className="container">
         <HeaderPage
-          title="Relatório de Consolidados Diarios"
-          description="Saldos de todos os dias consolidado."
+          title="Meus Lançamentos"
+          description="Todos os seus lançamentos de acordo com a conta bancária."
         />
-
         <SearchDate
           setContaSelect={setContaSelect}
           setStartDate={setStartDate}

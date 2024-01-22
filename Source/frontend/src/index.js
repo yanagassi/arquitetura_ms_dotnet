@@ -8,13 +8,15 @@ import Menu from "./components/Menu";
 
 import Footer from "./components/Footer";
 import { ApiProvider } from "./context/ApiContext";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 ReactDOM.render(
   <Router>
     <ApiProvider>
       <Menu />
       <App />
-      <Footer />
+      <ToastContainer />
     </ApiProvider>
   </Router>,
   document.getElementById("root")

@@ -7,24 +7,21 @@ function getCurrentDate() {
   const formattedDate = `${year}-${month}-${day}`;
   return formattedDate;
 }
-function formatDateTimeColumn(dateTimeString) {
+
+function formatDateColumn(dateTimeString) {
   const options = {
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
   };
 
   const date = new Date(dateTimeString);
-  const formattedDateTime = date
-    .toLocaleString("en-US", options)
-    .replace(/(\d+)\D+(\d+)\D+(\d+)\D+(\d+)\D+(\d+)/, "$1.$2.$3 $4:$5");
+  const formattedDate = date.toLocaleString("en-US", options);
 
-  return formattedDateTime.replace("AM", "").replace("PM", "");
+  return formattedDate.replace(/(\d+)\D+(\d+)\D+(\d+)/, "$2/$1/$3");
 }
 
-function formatMoney(numero, locale = "pt-BR", currency = "BRL") {
+function formatMoney(numero = 0, locale = "pt-BR", currency = "BRL") {
   return numero.toLocaleString(locale, {
     style: "currency",
     currency,
@@ -43,7 +40,7 @@ function getTypeCreditOrDebit(tipo) {
 
 export default {
   getCurrentDate,
-  formatDateTimeColumn,
+  formatDateColumn,
   formatMoney,
   getTypeCreditOrDebit,
 };

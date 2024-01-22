@@ -4,57 +4,76 @@ import Helper from "../helpers/Helper";
 import { NumericFormat } from "react-number-format";
 import LancamentosService from "../services/LancamentosService";
 import { useApi } from "../context/ApiContext";
+import { toast } from "react-toastify";
+
+const initialState = {
+  data: Helper.getCurrentDate(),
+  descricao: "",
+  tipo: "debito",
+  valor: 0,
+  contaId: "89bc5c51-016e-4d57-a6bd-f884dedf98a8",
+};
 
 function Lancamentos() {
-  const { user } = useApi();
-
-  const [formData, setFormData] = useState({
-    data: Helper.getCurrentDate(),
-    descricao: "",
-    tipo: "debito",
-    valor: 0,
-    contaId: "89bc5c51-016e-4d57-a6bd-f884dedf98a8",
-  });
+  const { user, setLoad } = useApi();
+  const [formData, setFormData] = useState(initialState);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "valor") {
-      const numericValue = parseFloat(value.replace(/[^0-9.-]/g, ""));
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]:
+        name === "valor" ? parseFloat(value.replace(/[^0-9.-]/g, "")) : value,
+    }));
+  };
 
-      setFormData({
-        ...formData,
-        [name]: numericValue,
-      });
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+  const validateForm = () => {
+    if (!formData.descricao.trim()) {
+      toast.error("Descrição é obrigatória");
+      return false;
     }
+
+    if (!formData.data) {
+      toast.error("Data é obrigatória");
+      return false;
+    }
+
+    if (formData.valor <= 0) {
+      toast.error("Valor deve ser maior que zero");
+      return false;
+    }
+
+    return true;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!validateForm()) {
+      return;
+    }
+
     try {
-      const lancamentoAdicionado = await LancamentosService.adicionarLancamento(
-        {
-          ...formData,
-          userId: user?.nameidentifier,
-          data: new Date(formData.data).toISOString(),
-        }
-      );
-      console.log("Lançamento adicionado com sucesso:", lancamentoAdicionado);
+      setLoad(true);
+      await LancamentosService.adicionarLancamento({
+        ...formData,
+        userId: user?.nameidentifier,
+        data: new Date(formData.data).toISOString(),
+      });
+      toast.success("Lançamento adicionado com sucesso!");
+      setFormData(initialState);
+      setLoad(false);
     } catch (error) {
       console.error("Erro ao adicionar lançamento:", error);
+      toast.error("Erro ao adicionar lançamento");
+      setLoad(false);
     }
   };
-
   return (
     <div className="container mx-auto p-14 pt-0">
       <form onSubmit={handleSubmit} className="">
-        <h2 className="text-2xl font-semibold mb-8">Lançamentos</h2>
+        <h2 className="text-2xl font-semibold mb-8 text-gray">Lançamentos</h2>
         <div className="mb-4">
           <label
             htmlFor="descricao"
@@ -65,6 +84,7 @@ function Lancamentos() {
           <input
             type="text"
             id="descricao"
+            required
             name="descricao"
             value={formData.descricao}
             onChange={handleChange}
@@ -146,8 +166,9 @@ function Lancamentos() {
               onChange={handleChange}
               className="mt-1 p-2 w-full border  border-stone-300 rounded-md focus:outline-none focus:border-primary"
             >
-              <option value="Conta A">Conta A</option>
-              <option value="Conta B">Conta B</option>
+              <option value="89bc5c51-016e-4d57-a6bd-f884dedf98a8">
+                Conta Única
+              </option>
             </select>
           </div>
         </div>
@@ -155,7 +176,7 @@ function Lancamentos() {
         <div className="mt-6 w-full flex justify-end">
           <button
             type="submit"
-            className="py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+            className="py-2 px-4 bg-primary text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
           >
             Salvar
           </button>

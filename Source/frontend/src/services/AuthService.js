@@ -1,7 +1,8 @@
+import ConfigConstants from "../constants/config";
 import api from "./api";
 import { jwtDecode } from "jwt-decode";
 
-const TOKEN_PREFIX = "AUTH_TOKEN_PLATFORM";
+const TOKEN_PREFIX = ConfigConstants.tokenEnum;
 
 class AuthService {
   constructor() {
@@ -48,6 +49,11 @@ class AuthService {
     this.token = null;
   }
 
+  /**
+   * Remove chaves de um objeto que seguem o padrão especificado.
+   * @param {object} obj - O objeto a ser modificado.
+   * @returns {object} O objeto modificado após a remoção das chaves que correspondem ao padrão.
+   */
   removeClaimsKey(obj) {
     const pattern = "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/";
     if (typeof obj !== "object" || obj === null) {

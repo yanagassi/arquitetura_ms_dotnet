@@ -5,13 +5,13 @@ const Table = ({ data = [], columns = [], className, isLoading = false }) => {
   const hasData = data.length > 0;
 
   return (
-    <table className={`border-collapse ${className}`}>
+    <table className={`border-collapse ${className} border border-neutral-200`}>
       <thead>
         <tr>
           {columns.map((column) => (
             <th
               key={column.key}
-              className={`py-2 font-bold text-sm pl-4 h-[40px] text-center bg-gray text-gray ${column.className}`}
+              className={`py-2 font-bold text-[15px] pl-4 h-[40px] text-center bg-gray text-gray ${column.className}`}
             >
               {column.label}
             </th>

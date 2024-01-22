@@ -6,6 +6,7 @@ const ApiContext = createContext();
 export const ApiProvider = ({ children }) => {
   const [authService] = useState(() => new AuthService());
   const [user, setUser] = useState(null);
+  const [load, setLoad] = useState(false);
 
   const [isAuthenticated, setIsAuthenticated] = useState(
     authService.isAuthenticated()
@@ -17,7 +18,9 @@ export const ApiProvider = ({ children }) => {
   }, [authService]);
 
   const login = async (email, senha) => {
+    setLoad(true);
     const success = await authService.login(email, senha);
+    setLoad(false);
     if (success) {
       setIsAuthenticated(true);
     }
@@ -30,7 +33,9 @@ export const ApiProvider = ({ children }) => {
   };
 
   return (
-    <ApiContext.Provider value={{ isAuthenticated, login, logout, user }}>
+    <ApiContext.Provider
+      value={{ isAuthenticated, login, logout, user, load, setLoad }}
+    >
       {children}
     </ApiContext.Provider>
   );

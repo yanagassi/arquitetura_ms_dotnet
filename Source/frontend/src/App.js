@@ -6,17 +6,21 @@ import { useApi } from "./context/ApiContext";
 import LoadSpinner from "./components/LoadSpinner";
 import Lancamentos from "./pages/Lancamentos";
 import Login from "./pages/Login";
+import MeusLancamentos from "./pages/MeusLancamentos";
 import Relatorio from "./pages/Relatorio";
 
 function App() {
-  const { isAuthenticated } = useApi();
+  const { isAuthenticated, load } = useApi();
   if (!isAuthenticated) {
     return (
-      <Switch>
-        <Route exact path="/*">
-          <Login />
-        </Route>
-      </Switch>
+      <>
+        <Switch>
+          <Route exact path="/*">
+            <Login />
+          </Route>
+        </Switch>
+        <LoadSpinner isLoading={load} />
+      </>
     );
   }
   return (
@@ -28,9 +32,14 @@ function App() {
         <Route exact path="/lancamentos">
           <Lancamentos />
         </Route>
-        <Route exact path="/relatorios">
+        <Route exact path="/meus-lancamentos">
+          <MeusLancamentos />
+        </Route>
+
+        <Route exact path="/relatorio">
           <Relatorio />
         </Route>
+
         <Route exact path="/login">
           <Login />
         </Route>
@@ -38,7 +47,7 @@ function App() {
           <NotFoundPage />
         </Route>
       </Switch>
-      <LoadSpinner isLoading={false} />
+      <LoadSpinner isLoading={load} />
     </div>
   );
 }

@@ -9,7 +9,7 @@ const Menu = () => {
     <div className="bg-primary pl-lg pr-lg h-16 flex items-center justify-between mb-10">
       <div>
         <Link to="/" className="text-white font-bold text-xl">
-          <img src="/Images/logo.png" className="w-16" alt="Logo" />
+          <img src="/Images/logo.png" className="w-16 p-2" alt="Logo" />
         </Link>
       </div>
       {isAuthenticated ? (
@@ -24,13 +24,20 @@ const Menu = () => {
             to="/lancamentos"
             className="text-white text-lmd hover:text-gray-300 pr-10 w-100 flex"
           >
-            Lançamentos
+            Novo Lançamento
           </Link>
           <Link
-            to="/relatorios"
+            to="/meus-lancamentos"
+            className="text-white text-lmd hover:text-gray-300 pr-10 w-100 flex"
+          >
+            Meus Lançamentos
+          </Link>
+
+          <Link
+            to="/relatorio"
             className="text-white text-lmd hover:text-gray-300  w-100 flex"
           >
-            Relatórios
+            Relatório
           </Link>
         </div>
       ) : null}

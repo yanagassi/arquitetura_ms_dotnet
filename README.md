@@ -9,6 +9,19 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 <img src="./Arquitetura/Diagrama de Arquitetura.png"/>
 <i>Arquitetura baseada em microsserviços, utilizando docker para administrar os containers e imagens.</i>
 
+## Plataforma
+
+<img src="./Arquitetura/lancamentos.png"/>
+<i>Aqui você pode fazer o lançamento de um Debito ou Crédito.</i>
+
+<br/>
+<img src="./Arquitetura/meus-lancamentos.png"/>
+<i>Aqui obter um historico do seus lançamentos.</i>
+
+<br/>
+<img src="./Arquitetura/consolidado.png"/>
+<i>Aqui obter um relatorio consolidado <b>diario</b> de seu saldo.</i>
+
 ## Pré-requisitos
 
 - [Docker](https://www.docker.com/)
@@ -51,5 +64,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
    ```bash
    npm start
    ```
+
+#### \* O sistema já cria um usuario, senha e conta bancaria automaticamente, o login já é preenchido automaticamente na pagina de Login no frontend.
 
 #### \* Lembre-se de desativar a politica de CORS do seu navegador, pois o API Gateway sobe na porta 80 pelo docker.

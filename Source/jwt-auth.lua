@@ -4,7 +4,7 @@ local validators = require "resty.jwt-validators"
 
 local secret_file_path = "/etc/nginx/jwt-secret-file"
 
--- Lê a chave secreta do arquivo
+-- Lê a chave secret do arquivo
 local secret_file = io.open(secret_file_path, "r")
 local secret = secret_file and secret_file:read("*a")
 secret_file:close()

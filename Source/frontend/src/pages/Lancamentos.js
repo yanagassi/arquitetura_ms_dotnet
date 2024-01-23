@@ -65,8 +65,7 @@ function Lancamentos() {
       setFormData(initialState);
       setLoad(false);
     } catch (error) {
-      console.error("Erro ao adicionar lançamento:", error);
-      toast.error("Erro ao adicionar lançamento");
+      toast.error(error);
       setLoad(false);
     }
   };

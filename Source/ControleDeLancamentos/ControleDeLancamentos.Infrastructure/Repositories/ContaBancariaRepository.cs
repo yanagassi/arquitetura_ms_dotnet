@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using ControleDeLancamentos.Domain.Entities;
 using ControleDeLancamentos.Domain.Repositories;
 using ControleDeLancamentos.Infrastructure.DbContexts;
@@ -23,7 +25,7 @@ namespace ControleDeLancamentos.Infrastructure.Repositories
                 .FirstOrDefaultAsync(c => c.Id == contaId);
         }
 
-        public IQueryable<ContaBancaria> ObterContasPorUserId(Guid userId)
+        public async Task<IQueryable<ContaBancaria>> ObterContasPorUserId(Guid userId)
         {
             return _dbContext.ContasBancarias
                 .Where(c => c.UserId == userId);
@@ -35,28 +37,31 @@ namespace ControleDeLancamentos.Infrastructure.Repositories
                 throw new ArgumentNullException(nameof(conta));
 
             _dbContext.ContasBancarias.Add(conta);
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
-
 
         public async Task AtualizarConta(ContaBancaria conta)
         {
             if (conta == null)
                 throw new ArgumentNullException(nameof(conta));
 
-            var contaExistente = _dbContext.ContasBancarias.FirstOrDefault(c => c.Id == conta.Id);
+            var contaExistente = await _dbContext.ContasBancarias.FirstOrDefaultAsync(c => c.Id == conta.Id);
 
             if (contaExistente == null)
             {
                 throw new Exception("Conta bancária não encontrada.");
             }
 
-            // Atualiza os dados da conta existente
+
             contaExistente.Nome = conta.Nome;
             contaExistente.Saldo = conta.Saldo;
 
-            _dbContext.SaveChanges();
+            await _dbContext.SaveChangesAsync();
         }
 
+        public async Task<IEnumerable<ContaBancaria>> ObterContasBancariasPorUserId(Guid userId)
+        {
+            return await _dbContext.ContasBancarias .Where(c => c.UserId == userId).ToArrayAsync();
+        }
     }
 }

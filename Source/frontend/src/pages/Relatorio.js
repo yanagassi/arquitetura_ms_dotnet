@@ -58,6 +58,10 @@ function MeusLancamentos() {
     setLoad(false);
   };
 
+  const getTotalValue = () => {
+    return contas.filter((e) => e.id === contaSelect)[0];
+  };
+
   const handleAutoFill = (days) => {
     const today = new Date();
     setEndDate(today.toISOString().split("T")[0]);
@@ -69,7 +73,7 @@ function MeusLancamentos() {
     {
       key: "lancamentos",
       label: "Nº Transações Diarias",
-      className: "text-start pl-8 font-semibold  w-4",
+      className: "text-start pl-8 font-semibold  w-[150px]",
       component: ({ lancamentos }) => <span>{lancamentos?.length ?? 0}</span>,
     },
     {
@@ -110,6 +114,16 @@ function MeusLancamentos() {
         />
         <DateFilterButtons handleAutoFill={handleAutoFill} />
         <div className="mt-3">
+          <th className="text-zinc-700 border-gray bg-gray">
+            <td>
+              <span className="p-10 pl-2 pr-2 text-md">
+                Total em Conta Hoje:
+              </span>
+              <span className="pr-2 text-green-600 text-md">
+                {Helper.formatMoney(getTotalValue()?.saldo)}
+              </span>
+            </td>
+          </th>
           <Table className={"w-full"} columns={tableColumns} data={dados} />
         </div>
       </div>

@@ -28,7 +28,7 @@ function SearchDate({
               type="date"
               value={startDate}
               onChange={(e) => setStartDate(e.target.value)}
-              className="p-2 border border-stone-300 rounded-md focus:none focus:border-primary"
+              className="p-2 border border-stone-300 rounded-md focus:none focus:border-primary "
             />
           </div>
           <span className="ml-2 mr-2 mt-8">A</span>

@@ -27,7 +27,7 @@ function App() {
     <div>
       <Switch>
         <Route exact path="/">
-          <p>Dashboard</p>
+          <Lancamentos />
         </Route>
         <Route exact path="/lancamentos">
           <Lancamentos />

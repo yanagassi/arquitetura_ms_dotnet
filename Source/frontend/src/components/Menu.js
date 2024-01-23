@@ -15,12 +15,6 @@ const Menu = () => {
       {isAuthenticated ? (
         <div className="flex">
           <Link
-            to="/"
-            className="text-white text-lmd hover:text-gray-300 pr-10 w-100 flex"
-          >
-            Início
-          </Link>
-          <Link
             to="/lancamentos"
             className="text-white text-lmd hover:text-gray-300 pr-10 w-100 flex"
           >
@@ -37,7 +31,7 @@ const Menu = () => {
             to="/relatorio"
             className="text-white text-lmd hover:text-gray-300  w-100 flex"
           >
-            Relatório
+            Consolidados Diarios
           </Link>
         </div>
       ) : null}

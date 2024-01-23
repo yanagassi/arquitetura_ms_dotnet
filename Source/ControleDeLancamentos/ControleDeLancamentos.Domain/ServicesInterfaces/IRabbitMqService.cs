@@ -1,8 +1,6 @@
 ﻿using ControleDeLancamentos.Domain.Entities;
 
-/// <summary>
-/// Serviço responsável pelo controle de lançamentos e interações com contas bancárias.
-/// </summary>
+
 public interface IRabbitMqService
 {
     /// <summary>

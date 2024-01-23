@@ -32,9 +32,9 @@ function getTypeCreditOrDebit(tipo) {
   if (typeof tipo === "string") tipo = parseInt(tipo);
   switch (tipo) {
     case 0:
-      return "Crédito";
-    case 1:
       return "Debito";
+    case 1:
+      return "Crédito";
   }
 }
 

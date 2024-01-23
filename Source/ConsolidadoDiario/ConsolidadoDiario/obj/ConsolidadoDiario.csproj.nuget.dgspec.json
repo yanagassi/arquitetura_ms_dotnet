@@ -167,6 +167,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Polly": {
+              "target": "Package",
+              "version": "[6.1.2, )"
+            },
             "RabbitMQ.Client": {
               "target": "Package",
               "version": "[3.6.9, )"

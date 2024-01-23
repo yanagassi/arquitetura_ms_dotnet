@@ -8,7 +8,7 @@ namespace ControleDeLancamentos.Domain.Repositories
     {
         Task<ContaBancaria> ObterContaAsync(Guid contaId);
         Task AdicionarConta(ContaBancaria conta);
-        IQueryable<ContaBancaria> ObterContasPorUserId(Guid userId);
-        Task AtualizarConta(ContaBancaria conta);
+        Task<IEnumerable<ContaBancaria>> ObterContasBancariasPorUserId(Guid userId);
+        Task AtualizarConta(ContaBancaria conta); 
     }
 }

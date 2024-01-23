@@ -37,7 +37,6 @@ services:
       - RABBITMQ_DEFAULT_PASS=pass
       - RABBITMQ_DEFAULT_QUEUE_NAME=lancamentos_queue
 
-
   controle-lancamentos-db:
     image: postgres:latest
     container_name: controle-lancamentos-db

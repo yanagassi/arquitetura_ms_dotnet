@@ -38,14 +38,14 @@ namespace ControleDeLancamentos.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Erro interno: {ex.Message}");
+                return StatusCode(500, $"{ex.Message}");
             }
         }
 
         [HttpPost("lancamentos")]
         public async Task<IActionResult> AdicionarLancamento([FromBody] LancamentoDTO lancamentoDTO)
         {
-          
+
             try
             {
                 await _servicoControleLancamentos.AdicionarLancamentoAsync(_mapper.Map<Domain.Entities.Lancamento>(lancamentoDTO));
@@ -53,7 +53,7 @@ namespace ControleDeLancamentos.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Erro interno: {ex.Message}");
+                return StatusCode(500, $"{ex.Message}");
             }
         }
 
@@ -67,7 +67,7 @@ namespace ControleDeLancamentos.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Erro interno: {ex.Message}");
+                return StatusCode(500, $"{ex.Message}");
             }
         }
 

@@ -9,6 +9,6 @@ namespace ControleDeLancamentos.Domain.Entities
         public decimal Saldo { get; set; } = 0;
 
         // Relacionamento com Lançamentos
-        public List<Lancamento> Lancamentos { get; set; }
+        public List<Lancamento>? Lancamentos { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8NtYjoaZiOYyS+MrWT0JTynJTpbmvvYqh5Ss0GLBa2A8J9CvhSY3nejI285vgbm1fngKrWkgahPWwH0aLTsVZw==",
+  "dgSpecHash": "JtMGbO2GQhTBQgjCuxh3kRnZO/6Qcdi0hbIQnMhdyhPCzBZqDEr0Wrjr2TrknmuGruorr8l+6FhB7RahMNvXmA==",
   "success": true,
   "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ConsolidadoDiario/ConsolidadoDiario/ConsolidadoDiario.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "/Users/yanesteves/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/polly/6.1.2/polly.6.1.2.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/rabbitmq.client/3.6.9/rabbitmq.client.3.6.9.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/stackexchange.redis/2.7.17/stackexchange.redis.2.7.17.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",

@@ -10,6 +10,7 @@ public class DefaultAutoMapperProfile : Profile
     public DefaultAutoMapperProfile()
     {
         CreateMap<LancamentoDTO, Lancamento>();
+        CreateMap<ContaBancariaDTO, ContaBancaria>();
     }
 }
  

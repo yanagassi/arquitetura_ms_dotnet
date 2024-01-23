@@ -91,7 +91,7 @@ function MeusLancamentos() {
       component: ({ valor, tipo }) => (
         <span
           className={`text-md font-semibold ${
-            tipo === "1" ? "text-red-600" : "text-green-600"
+            tipo !== "1" ? "text-red-600" : "text-green-600"
           }`}
         >
           {Helper.formatMoney(valor)}
@@ -105,7 +105,7 @@ function MeusLancamentos() {
       component: ({ tipo }) => (
         <span
           className={`text-md font-semibold ${
-            tipo === "1" ? "text-red-600" : "text-green-600"
+            tipo !== "1" ? "text-red-600" : "text-green-600"
           }`}
         >
           {Helper.getTypeCreditOrDebit(tipo)}

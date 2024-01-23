@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "572a7c44-5dde-4903-a079-f844c07ab121",
+		"name": "Arquitetura",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9997540",
+		"_collection_link": "https://dark-meteor-405549.postman.co/workspace/Team-Workspace~6d1b17f9-4e26-4980-8d0d-1fcd60eead13/collection/9997540-572a7c44-5dde-4903-a079-f844c07ab121?action=share&source=collection_link&creator=9997540"
+	},
+	"item": [
+		{
+			"name": "Autenticação",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"admin@admin.com\",\n  \"senha\": \"admin\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/auth/autenticacao",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"autenticacao"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ControleDeLancamentos",
+			"item": [
+				{
+					"name": "Novo Lançamento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjdmNmFlZWRmLWI2YWMtNDVhMi1iYTNmLTM1OTYxMjNmZmVmNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbmlzdHJhZG9yIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNzA1OTM4MTI0LCJpc3MiOiJhdXRoIiwiYXVkIjoiYXV0aCJ9.kF-2ELKxLGOy875uXmLVys3OGGiv58jI-vaiJmMpTUY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n  \"valor\": 2,\n  \"tipo\": \"credito\",\n  \"descricao\": \"testando\",\n  \"data\": \"2024-01-21T22:25:19.701Z\",\n  \"contaId\": \"89bc5c51-016e-4d57-a6bd-f884dedf98a8\",\n  \"userId\":\"7f6aeedf-b6ac-45a2-ba3f-3596123ffef5\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/lancamentos/ControleLancamentos/lancamentos",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"lancamentos",
+								"ControleLancamentos",
+								"lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lançamentos p/ ContaId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/lancamentos/ControleLancamentos/contas/36b7bece-d32a-41a1-8748-df84b960f4ae/lancamentos",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"lancamentos",
+								"ControleLancamentos",
+								"contas",
+								"36b7bece-d32a-41a1-8748-df84b960f4ae",
+								"lancamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Contas Bancarias p/ UserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/lancamentos/ContaBancaria/usuario/7f6aeedf-b6ac-45a2-ba3f-3596123ffef5",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"lancamentos",
+								"ContaBancaria",
+								"usuario",
+								"7f6aeedf-b6ac-45a2-ba3f-3596123ffef5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Saldo p/ ContaId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/lancamentos/ControleLancamentos/contas/36b7bece-d32a-41a1-8748-df84b960f4ae/saldo",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"lancamentos",
+								"ControleLancamentos",
+								"contas",
+								"36b7bece-d32a-41a1-8748-df84b960f4ae",
+								"saldo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consolidado",
+			"item": [
+				{
+					"name": "Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjdmNmFlZWRmLWI2YWMtNDVhMi1iYTNmLTM1OTYxMjNmZmVmNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbmlzdHJhZG9yIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNzA1OTMzMTAzLCJpc3MiOiJhdXRoIiwiYXVkIjoiYXV0aCJ9.Toh4XwddwzzCI-9wFZvCMAb-u4dmUmySEsQygovZXb0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/consolidado/Consolidado/89bc5c51-016e-4d57-a6bd-f884dedf98a8",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"consolidado",
+								"Consolidado",
+								"89bc5c51-016e-4d57-a6bd-f884dedf98a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consolidado p/ Filtro",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjdmNmFlZWRmLWI2YWMtNDVhMi1iYTNmLTM1OTYxMjNmZmVmNSIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL25hbWUiOiJBZG1pbmlzdHJhZG9yIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvZW1haWxhZGRyZXNzIjoiYWRtaW5AYWRtaW4uY29tIiwiZXhwIjoxNzA1OTMzMTAzLCJpc3MiOiJhdXRoIiwiYXVkIjoiYXV0aCJ9.Toh4XwddwzzCI-9wFZvCMAb-u4dmUmySEsQygovZXb0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{GATEWAY_URI}}/api/consolidado/Consolidado/89bc5c51-016e-4d57-a6bd-f884dedf98a8/2024-01-01/2024-03-31",
+							"host": [
+								"{{GATEWAY_URI}}"
+							],
+							"path": [
+								"api",
+								"consolidado",
+								"Consolidado",
+								"89bc5c51-016e-4d57-a6bd-f884dedf98a8",
+								"2024-01-01",
+								"2024-03-31"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

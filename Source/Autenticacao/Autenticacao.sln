@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao.Infrastructure
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao.Domain", "Autenticacao.Domain\Autenticacao.Domain.csproj", "{6CD4070F-0BE9-42FC-B5A4-39224140BACC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Autenticacao.Tests", "Autenticacao.Tests\Autenticacao.Tests.csproj", "{F3527FE3-1B49-4AF8-B18B-4E74F66E7566}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD4070F-0BE9-42FC-B5A4-39224140BACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3527FE3-1B49-4AF8-B18B-4E74F66E7566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3527FE3-1B49-4AF8-B18B-4E74F66E7566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3527FE3-1B49-4AF8-B18B-4E74F66E7566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3527FE3-1B49-4AF8-B18B-4E74F66E7566}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

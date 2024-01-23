@@ -10,11 +10,14 @@
     <None Remove="Entities\" />
     <None Remove="Repositories\" />
     <None Remove="Services\" />
+    <None Remove="Entities\ConsolidatedData.json" />
+    <None Remove="ServiceInterfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Entities\" />
     <Folder Include="Repositories\" />
     <Folder Include="Services\" />
+    <Folder Include="ServiceInterfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />

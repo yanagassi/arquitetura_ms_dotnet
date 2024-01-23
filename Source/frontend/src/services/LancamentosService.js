@@ -14,8 +14,10 @@ class LancamentoService {
       );
       return response.data;
     } catch (error) {
-      console.error("Erro ao adicionar lançamento:", error);
-      throw error;
+      if (error.response && error.response.data) {
+        throw error.response.data;
+      }
+      throw error.message;
     }
   }
 }

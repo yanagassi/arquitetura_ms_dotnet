@@ -101,22 +101,23 @@ namespace ConsolidadoDiario.Domain.Services
             return lancamentos;
         }
 
-        
+
         public async Task<IEnumerable<ConsolidatedData>> CalcularValorConsolidadoPorDiaAsync(Guid contaId, DateTime dataInicio, DateTime dataFim)
         {
             var lancamentosPorData = await ObterLancamentosPorContaIdEDataAsync(contaId, dataInicio, dataFim);
 
             var consolidatedData = lancamentosPorData
-                .GroupBy(l => l.Data.Date)
+                .GroupBy(l => new { l.Data.Date, l.Tipo }) 
                 .Select(group => new ConsolidatedData
                 {
-                    Date = group.Key,
+                    Date = group.Key.Date, 
                     TotalValue = group.Sum(l => l.Valor),
                     Lancamentos = group.ToList()
                 });
 
             return consolidatedData;
         }
+
 
     }
 }

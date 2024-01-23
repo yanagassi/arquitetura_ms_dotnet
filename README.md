@@ -39,7 +39,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 2. **Acesse a pasta do projeto:**
 
    ```bash
-    cd seu-repositorio/Source
+    cd arquitetura_ms_dotnet/Source
    ```
 
 3. **Inicie os contêineres do Docker:**

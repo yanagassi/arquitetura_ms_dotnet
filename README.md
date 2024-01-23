@@ -51,7 +51,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 4. **Acesse a aplicação React:**
 
    ```bash
-   cd front
+   cd /Source/front
    ```
 
 5. **Instale as dependências do Node.js:**

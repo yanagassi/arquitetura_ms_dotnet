@@ -45,7 +45,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 3. **Inicie os contêineres do Docker:**
 
    ```bash
-   docker-compose up -d
+   docker-compose up --build
    ```
 
 4. **Acesse a aplicação React:**

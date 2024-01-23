@@ -80,8 +80,30 @@ function MeusLancamentos() {
       key: "totalValue",
       label: "Valor Total do Dia",
       className: "text-center  ",
+
       component: ({ totalValue, tipo }) => (
-        <span>{Helper.formatMoney(totalValue)}</span>
+        <span
+          className={`text-md font-semibold ${
+            tipo !== "1" ? "text-red-600" : "text-green-600"
+          }`}
+        >
+          {Helper.formatMoney(totalValue)}
+        </span>
+      ),
+    },
+
+    {
+      key: "tipo",
+      label: "Tipo de Transação",
+      className: "text-center  ",
+      component: ({ tipo }) => (
+        <span
+          className={`text-md font-semibold ${
+            tipo !== "1" ? "text-red-600" : "text-green-600"
+          }`}
+        >
+          {Helper.getTypeCreditOrDebit(tipo)}
+        </span>
       ),
     },
 

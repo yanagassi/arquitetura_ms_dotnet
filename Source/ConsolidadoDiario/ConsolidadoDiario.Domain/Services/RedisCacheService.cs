@@ -112,6 +112,7 @@ namespace ConsolidadoDiario.Domain.Services
                 {
                     Date = group.Key.Date, 
                     TotalValue = group.Sum(l => l.Valor),
+                    Tipo = group.Key.Tipo,
                     Lancamentos = group.ToList()
                 });
 

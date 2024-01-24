@@ -68,3 +68,13 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 #### \* O sistema já cria um usuario, senha e conta bancaria automaticamente, o login já é preenchido automaticamente na pagina de Login no frontend.
 
 #### \* Lembre-se de desativar a politica de CORS do seu navegador, pois o API Gateway sobe na porta 80 pelo docker.
+
+## Testes
+
+<img src="./Arquitetura/testes_integracao.png" />
+<i>Nos testes realizados, consegui a resposta media de 25ms nos endpoints. Executando no total de 1500 validações.</i>
+<br/>
+<br/>
+
+<img src="./Arquitetura/teste_jmetter.png" />
+<i>Realizei também um teste no cenário especificado pelo requisito não funcional de 500 requisições por segundo, e obtemos uma taxa de perda de requisições de 3%, mas seria necessário rodar em cloud para obter resutlados mais acertivos.</i>

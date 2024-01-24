@@ -39,7 +39,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 2. **Acesse a pasta do projeto:**
 
    ```bash
-    cd seu-repositorio/Source
+    cd arquitetura_ms_dotnet/Source
    ```
 
 3. **Inicie os contêineres do Docker:**
@@ -51,7 +51,7 @@ Sistema de controle de fluxo de caixa diario, baseado em lançamentos e relatór
 4. **Acesse a aplicação React:**
 
    ```bash
-   cd front
+   cd /Source/front
    ```
 
 5. **Instale as dependências do Node.js:**

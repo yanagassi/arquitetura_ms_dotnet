@@ -14,6 +14,7 @@
           "Microsoft.EntityFrameworkCore": "6.0.26",
           "Microsoft.EntityFrameworkCore.Design": "6.0.26",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "6.0.22",
+          "Polly": "6.1.2",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -206,6 +207,14 @@
           "lib/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "6.0.22.0",
             "fileVersion": "6.0.22.0"
+          }
+        }
+      },
+      "Polly/6.1.2": {
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.1.2.0"
           }
         }
       },
@@ -467,6 +476,13 @@
       "sha512": "sha512-iD0X/yef9KBsCBMDT1ZytW3pPYeYHeceUuiznaeGfkltvluG7O25aG2fwv2sO6icESL0CLNwNAF1Mu4cFrKmaA==",
       "path": "npgsql.entityframeworkcore.postgresql/6.0.22",
       "hashPath": "npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512"
+    },
+    "Polly/6.1.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YIayKzqergfdSzWRpkhc7r5NpcYoljNarT0HNygewJdDsaCDgdAjGMsFAEsrlQf+rEQOPYrZlkfbhsB9QzdPIg==",
+      "path": "polly/6.1.2",
+      "hashPath": "polly.6.1.2.nupkg.sha512"
     },
     "RabbitMQ.Client/3.6.9": {
       "type": "package",

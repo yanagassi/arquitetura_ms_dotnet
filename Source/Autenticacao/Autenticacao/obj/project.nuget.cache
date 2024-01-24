@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kIk64BiidqTv5qCYGogWDGRu1yDwSs+PCWhJWufqGp6rlJf2YqOueRQEHkghe5NQcbMyDx9eWGA51vujrTCSsw==",
+  "dgSpecHash": "ZKVbj9//MvfVPC4sBBhYJEGkOPpeQIkZKoDPOjVz7WiLHZCQBHqATMkwoxjU3fin9EuMT57ytK9bx4xfZyylUw==",
   "success": true,
   "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/Autenticacao.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "/Users/yanesteves/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/npgsql/6.0.10/npgsql.6.0.10.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.22/npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/polly/6.1.2/polly.6.1.2.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",

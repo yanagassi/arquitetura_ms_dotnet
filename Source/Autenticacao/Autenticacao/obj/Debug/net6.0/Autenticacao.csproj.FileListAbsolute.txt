@@ -49,3 +49,4 @@
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/obj/Debug/net6.0/Autenticacao.pdb
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/obj/Debug/net6.0/Autenticacao.genruntimeconfig.cache
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/obj/Debug/net6.0/ref/Autenticacao.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/bin/Debug/net6.0/Polly.dll

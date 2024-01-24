@@ -4,9 +4,10 @@ using ControleDeLancamentos.Infrastructure.DbContexts;
 using ControleDeLancamentos.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
- 
+
 builder.Services.AddControllers();
 
 var connectionString = Environment.GetEnvironmentVariable("DB_STRING_CONNECTION") ??
@@ -46,17 +47,19 @@ app.MapControllers();
 // Verifica se o argumento "--migrate" está presente e aplica as migrações
 if (args.Contains("--migrate"))
 {
-    var dbContext = app.Services.GetRequiredService<ControleLancamentosDbContext>();
 
-    try
+    var retryPolicy = Policy
+        .Handle<Exception>()
+        .WaitAndRetry(5, retryAttempt => TimeSpan.FromSeconds(10));
+
+
+    retryPolicy.Execute(() =>
     {
+        var dbContext = app.Services.GetRequiredService<ControleLancamentosDbContext>();
         dbContext.Database.Migrate();
         Console.WriteLine("Migrations applied successfully.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error applying migrations: {ex.Message}");
-    }
+    });
 }
+
 
 app.Run();

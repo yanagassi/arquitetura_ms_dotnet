@@ -99,7 +99,6 @@ namespace ConsolidadoDiario.Domain.Services.Tests
                 It.IsAny<RedisValue>(),  
                 When.Always, CommandFlags.None));
         }
-         
 
     }
 }

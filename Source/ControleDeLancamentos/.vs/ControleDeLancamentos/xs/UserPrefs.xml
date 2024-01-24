@@ -1,28 +1,33 @@
 ﻿<Properties StartupConfiguration="{BCB1C792-FC50-4BAF-8DEA-849D88544E34}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ControleDeLancamentos PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ControleDeLancamentos/Program.cs">
+    <Files>
+      <File FileName="ControleDeLancamentos.Test/ServicoControleLancamentosTests.cs" Line="31" Column="15" />
+      <File FileName="ControleDeLancamentos.Test/ContasBancariasServiceTests.cs" />
+      <File FileName="ControleDeLancamentos/Program.cs" Line="38" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ControleDeLancamentos" expanded="True">
-            <Node name="ControleDeLancamentos" expanded="True">
+          <Node name="ControleDeLancamentos">
+            <Node name="ControleDeLancamentos" selected="True">
               <Node name="Migrations" expanded="True" />
             </Node>
             <Node name="ControleDeLancamentos.Domain">
+              <Node name="Entities" expanded="True" />
               <Node name="Services" expanded="True" />
-              <Node name="ServicesInterfaces">
-                <Node name="IServicoControleLancamentos.cs" selected="True" />
-              </Node>
+              <Node name="ServicesInterfaces" expanded="True" />
             </Node>
-            <Node name="ControleDeLancamentos.Infrastructure" expanded="True">
+            <Node name="ControleDeLancamentos.Infrastructure">
               <Node name="Repositories" expanded="True" />
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>connectionString</Value>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -32,10 +37,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.ControleDeLancamentos PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

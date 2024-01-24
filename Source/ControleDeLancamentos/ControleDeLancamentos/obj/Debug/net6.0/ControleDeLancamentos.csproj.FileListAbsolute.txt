@@ -43,3 +43,4 @@
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ControleDeLancamentos/ControleDeLancamentos/obj/Debug/net6.0/ControleDeLancamentos.pdb
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ControleDeLancamentos/ControleDeLancamentos/obj/Debug/net6.0/ControleDeLancamentos.genruntimeconfig.cache
 /Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ControleDeLancamentos/ControleDeLancamentos/obj/Debug/net6.0/ref/ControleDeLancamentos.dll
+/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ControleDeLancamentos/ControleDeLancamentos/bin/Debug/net6.0/Polly.dll

@@ -386,6 +386,19 @@
           }
         }
       },
+      "Polly/6.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "RabbitMQ.Client/3.6.9": {
         "type": "package",
         "compile": {
@@ -1092,6 +1105,25 @@
         "postgresql.png"
       ]
     },
+    "Polly/6.1.2": {
+      "sha512": "YIayKzqergfdSzWRpkhc7r5NpcYoljNarT0HNygewJdDsaCDgdAjGMsFAEsrlQf+rEQOPYrZlkfbhsB9QzdPIg==",
+      "type": "package",
+      "path": "polly/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.deps.json",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.deps.json",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.6.1.2.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
     "RabbitMQ.Client/3.6.9": {
       "sha512": "nMDavg20BEeaUSbqCnnrjCwfALP4433FM7qemuPReJyaLWyFkJs0mASio6noN2LyuHy2j1UJLmhebHHshgjoOA==",
       "type": "package",
@@ -1280,6 +1312,7 @@
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.26",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.22",
+      "Polly >= 6.1.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1344,6 +1377,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[6.0.22, )"
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[6.1.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

@@ -1,39 +1,35 @@
 ﻿<Properties StartupConfiguration="{2CD3B945-B33B-4A78-9844-E065FF9BE64A}|Default">
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ConsolidadoDiario.Domain/ServiceInterfaces/IRedisCacheService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ConsolidadoDiario.Test/RedisCacheServiceTests.cs">
     <Files>
-      <File FileName="ConsolidadoDiario/Program.cs" Line="48" Column="45" />
-      <File FileName="ConsolidadoDiario.Domain/Services/RedisCacheService.cs" Line="104" Column="9" />
-      <File FileName="ConsolidadoDiario.Test/RedisCacheServiceTests.cs" Line="24" Column="21" />
-      <File FileName="ConsolidadoDiario.Domain/IRedisCacheService.cs" Line="10" Column="81" />
-      <File FileName="ConsolidadoDiario/Controllers/ConsolidadoController.cs" Line="47" Column="40" />
+      <File FileName="ConsolidadoDiario/Program.cs" />
+      <File FileName="ConsolidadoDiario/Controllers/ConsolidadoController.cs" />
+      <File FileName="ConsolidadoDiario.Domain/Services/RedisCacheService.cs" />
+      <File FileName="ConsolidadoDiario.Domain/Entities/ConsolidatedData.cs" />
+      <File FileName="ConsolidadoDiario.Test/RedisCacheServiceTests.cs" Line="30" Column="21" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ConsolidadoDiario" expanded="True">
-            <Node name="ConsolidadoDiario">
-              <Node name="Controllers" expanded="True" />
-              <Node name="Workers" expanded="True" />
-            </Node>
-            <Node name="ConsolidadoDiario.Domain">
-              <Node name="ServiceInterfaces" expanded="True">
-                <Node name="IRedisCacheService.cs" selected="True" />
-              </Node>
-              <Node name="Services" expanded="True" />
+          <Node name="ConsolidadoDiario">
+            <Node name="ConsolidadoDiario" expanded="True" />
+            <Node name="ConsolidadoDiario.Test" expanded="True">
+              <Node name="RedisCacheServiceTests.cs" selected="True" />
             </Node>
           </Node>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="ConsolidadoDiario" selected="True" />
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ConsolidadoDiario PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
 </Properties>

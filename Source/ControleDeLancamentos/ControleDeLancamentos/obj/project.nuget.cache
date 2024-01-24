@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/DOwVkKKj7ULuJcDaFiIipSq0YtjH0oCV5OvV2YCD1DM/yU68Fg0gz6m0cv8aZWqmdNo3Nnzppuk+RMV1vtUYQ==",
+  "dgSpecHash": "CG4Cru23LWyJxzZOjEWx9oeC799X506o1UVZojGi1slkl0CvKbNn9poq4BcU74mViFdAYdP6EaF96yeIkEsi0A==",
   "success": true,
   "projectFilePath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/ControleDeLancamentos/ControleDeLancamentos/ControleDeLancamentos.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "/Users/yanesteves/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/npgsql/6.0.10/npgsql.6.0.10.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/npgsql.entityframeworkcore.postgresql/6.0.22/npgsql.entityframeworkcore.postgresql.6.0.22.nupkg.sha512",
+    "/Users/yanesteves/.nuget/packages/polly/6.1.2/polly.6.1.2.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/rabbitmq.client/3.6.9/rabbitmq.client.3.6.9.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "/Users/yanesteves/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",

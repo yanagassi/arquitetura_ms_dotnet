@@ -93,6 +93,9 @@ namespace ControleDeLancamentos.Test
             CollectionAssert.AreEqual(new List<ContaBancaria>(), (List<ContaBancaria>)resultado);
             _contaBancariaRepositoryMock.Verify(repo => repo.ObterContasBancariasPorUserId(It.IsAny<Guid>()), Times.Once);
         }
+
+
+
     }
 }
 

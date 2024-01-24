@@ -132,6 +132,40 @@ namespace Autenticacao.Tests
              
             Assert.IsNull(resultado);
         }
+
+        [TestMethod]
+        /// <summary>
+        /// Deve retornar false quando o e-mail está vazio.
+        /// </summary>
+        public async Task ValidarCredenciaisAsync_DeveRetornarFalseQuandoEmailVazio()
+        {
+            var servicoAutenticacao = new ServicoAutenticacao(_usuarioRepositoryMock.Object, _configurationMock.Object);
+            var resultado = await servicoAutenticacao.ValidarCredenciaisAsync("", "senha");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        /// <summary>
+        /// Deve retornar false quando a senha está vazia.
+        /// </summary>
+        public async Task ValidarCredenciaisAsync_DeveRetornarFalseQuandoSenhaVazia()
+        {
+            var servicoAutenticacao = new ServicoAutenticacao(_usuarioRepositoryMock.Object, _configurationMock.Object);
+            var resultado = await servicoAutenticacao.ValidarCredenciaisAsync("teste@teste.com", "");
+            Assert.IsFalse(resultado);
+        }
+
+        [TestMethod]
+        /// <summary>
+        /// Deve retornar false quando o e-mail e a senha estão vazios.
+        /// </summary>
+        public async Task ValidarCredenciaisAsync_DeveRetornarFalseQuandoEmailESenhaVazios()
+        {
+            var servicoAutenticacao = new ServicoAutenticacao(_usuarioRepositoryMock.Object, _configurationMock.Object);
+            var resultado = await servicoAutenticacao.ValidarCredenciaisAsync("", "");
+            Assert.IsFalse(resultado);
+        }
+
     }
 
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,18 +39,18 @@ app.MapControllers();
 
 // Verifica se o argumento "--migrate" está presente e aplica as migrações
 if (args.Contains("--migrate"))
-{  
-    var dbContext = app.Services.GetRequiredService<AutenticacaoDbContext>();
+{
+    var retryPolicy = Policy
+        .Handle<Exception>()
+        .WaitAndRetry(5, retryAttempt => TimeSpan.FromSeconds(10));
 
-    try
+
+    retryPolicy.Execute(() =>
     {
+        var dbContext = app.Services.GetRequiredService<AutenticacaoDbContext>();
         dbContext.Database.Migrate();
         Console.WriteLine("Migrations applied successfully.");
-    }
-    catch (Exception ex)
-    {
-        Console.WriteLine($"Error applying migrations: {ex.Message}");
-    }
+    });
 }
 
 app.Run();

@@ -456,6 +456,19 @@
           }
         }
       },
+      "Polly/6.1.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {
+            "related": ".deps.json;.pdb;.xml"
+          }
+        }
+      },
       "Swashbuckle.AspNetCore/6.2.3": {
         "type": "package",
         "dependencies": {
@@ -483,7 +496,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "Swashbuckle.AspNetCore.SwaggerGen/6.2.3": {
         "type": "package",
@@ -513,7 +528,9 @@
             "related": ".pdb;.xml"
           }
         },
-        "frameworkReferences": ["Microsoft.AspNetCore.App"]
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "System.Collections.Immutable/6.0.0": {
         "type": "package",
@@ -1355,6 +1372,25 @@
         "postgresql.png"
       ]
     },
+    "Polly/6.1.2": {
+      "sha512": "YIayKzqergfdSzWRpkhc7r5NpcYoljNarT0HNygewJdDsaCDgdAjGMsFAEsrlQf+rEQOPYrZlkfbhsB9QzdPIg==",
+      "type": "package",
+      "path": "polly/6.1.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard1.1/Polly.deps.json",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.deps.json",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.6.1.2.nupkg.sha512",
+        "polly.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.2.3": {
       "sha512": "cnzQDn0Le+hInsw2SYwlOhOCPXpYi/szcvnyqZJ12v+QyrLBwAmWXBg6RIyHB18s/mLeywC+Rg2O9ndz0IUNYQ==",
       "type": "package",
@@ -1819,6 +1855,7 @@
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.18",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 6.0.22",
+      "Polly >= 6.1.2",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
   },
@@ -1834,8 +1871,12 @@
       "packagesPath": "/Users/yanesteves/.nuget/packages/",
       "outputPath": "/Users/yanesteves/Projetos/testes tecnicos/Arquitetura/Source/Autenticacao/Autenticacao/obj/",
       "projectStyle": "PackageReference",
-      "configFilePaths": ["/Users/yanesteves/.nuget/NuGet/NuGet.Config"],
-      "originalTargetFrameworks": ["net6.0"],
+      "configFilePaths": [
+        "/Users/yanesteves/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -1853,7 +1894,9 @@
         }
       },
       "warningProperties": {
-        "warnAsError": ["NU1605"]
+        "warnAsError": [
+          "NU1605"
+        ]
       }
     },
     "frameworks": {
@@ -1873,6 +1916,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[6.0.22, )"
+          },
+          "Polly": {
+            "target": "Package",
+            "version": "[6.1.2, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -1909,7 +1956,9 @@
       "warningLevel": 1,
       "message": "O pacote 'BCrypt 1.0.0' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' em vez da estrutura de destino do projeto 'net6.0'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "BCrypt",
-      "targetGraphs": ["net6.0"]
+      "targetGraphs": [
+        "net6.0"
+      ]
     }
   ]
 }

@@ -1,45 +1,39 @@
 ﻿<Properties StartupConfiguration="{B011B973-7857-4BD2-885B-9860748C8F3A}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Autenticacao.Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches>
     <Watch file="../../../Autenticacao/Program.cs" line="10" column="4" endLine="11" endColumn="66" offsetX="-1" offsetY="-1" expression="connectionString" liveUpdate="False" />
   </MonoDevelop.Ide.DebuggingService.PinnedWatches>
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Autenticacao" expanded="True">
-            <Node name="Autenticacao.Domain" expanded="True">
-              <Node name="Services" expanded="True">
-                <Node name="ServicoAutenticacao.cs" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>connectionString</Value>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.UnitTesting.TestPad">
-        <State name="__root__">
-          <Node name="Autenticacao">
-            <Node name="Autenticacao.Tests">
-              <Node name="Autenticacao.Tests">
-                <Node name="ServicoAutenticacaoTests">
-                  <Node name="LoginAsync_DeveRetornarNullQuandoUsuarioNaoExiste - dcfaba4e-690f-df67-1919-f900a62e2919" selected="True" />
-                </Node>
-              </Node>
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Autenticacao.Tests PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Autenticacao PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Autenticacao/Program.cs">
+    <Files>
+      <File FileName="Autenticacao.Tests/ServiceAutenticacaoTest.cs" />
+      <File FileName="Autenticacao.Domain/Services/ServicoAutenticacao.cs" />
+      <File FileName="Autenticacao/Program.cs" Line="54" Column="8" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Autenticacao" expanded="True">
+            <Node name="Autenticacao">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+            <Node name="Autenticacao.Infrastructure" expanded="True">
+              <Node name="DBContext" expanded="True" />
+            </Node>
+            <Node name="Autenticacao.Tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Autenticacao" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>

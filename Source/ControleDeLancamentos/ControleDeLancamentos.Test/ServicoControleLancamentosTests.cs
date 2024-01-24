@@ -14,6 +14,9 @@ namespace ControleDeLancamentos.Test
         private readonly Mock<IRabbitMqService> _rabbitMqServiceMock = new Mock<IRabbitMqService>();
 
         [TestMethod]
+        /// <summary>
+        /// Deve adicionar um lançamento e atualizar o saldo de crédito na conta bancária.
+        /// </summary>
         public async Task AdicionarLancamentoAsync_DeveAdicionarLancamentoEAtualizarSaldoCredito()
         { 
             var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Credito, Valor = 100 };
@@ -36,6 +39,9 @@ namespace ControleDeLancamentos.Test
         }
 
         [TestMethod]
+        /// <summary>
+        /// Deve adicionar um lançamento e atualizar o saldo de débito na conta bancária.
+        /// </summary>
         public async Task AdicionarLancamentoAsync_DeveAdicionarLancamentoEAtualizarSaldoDebito()
         { 
             var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Debito, Valor = 50 };
@@ -58,6 +64,9 @@ namespace ControleDeLancamentos.Test
         }
 
         [TestMethod]
+        /// <summary>
+        /// Deve lançar uma exceção quando a conta bancária não é encontrada.
+        /// </summary>
         public async Task AdicionarLancamentoAsync_DeveLancarExcecaoQuandoContaBancariaNaoEncontrada()
         { 
             var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Credito, Valor = 100 };
@@ -76,6 +85,9 @@ namespace ControleDeLancamentos.Test
         }
 
         [TestMethod]
+        /// <summary>
+        /// Deve lançar uma exceção quando o saldo é insuficiente para um débito.
+        /// </summary>
         public async Task AdicionarLancamentoAsync_DeveLancarExcecaoQuandoSaldoInsuficienteParaDebito()
         { 
             var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Debito, Valor = 150 };
@@ -95,6 +107,9 @@ namespace ControleDeLancamentos.Test
         }
 
         [TestMethod]
+        /// <summary>
+        /// Deve retornar uma lista de lançamentos da conta.
+        /// </summary>
         public async Task ObterLancamentosDaContaAsync_DeveRetornarListaDeLancamentos()
         { 
             var contaId = Guid.NewGuid();
@@ -120,6 +135,9 @@ namespace ControleDeLancamentos.Test
         }
 
         [TestMethod]
+        /// <summary>
+        /// Deve retornar o saldo correto da conta.
+        /// </summary>
         public async Task CalcularSaldoAsync_DeveRetornarSaldoCorreto()
         { 
             var contaId = Guid.NewGuid();
@@ -138,6 +156,68 @@ namespace ControleDeLancamentos.Test
             _lancamentoRepositoryMock.Verify(repo => repo.CalcularSaldoAsync(It.IsAny<Guid>()), Times.Once);
         }
 
+        [TestMethod]
+        /// <summary>
+        /// Deve lançar uma exceção ao adicionar um lançamento com valor zero.
+        /// </summary>
+        public async Task AdicionarLancamentoAsync_DeveLancarExcecaoAoAdicionarLancamentoComValorZero()
+        {
+            var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Credito, Valor = 0 };
+
+            var servicoControleLancamentos = new ServicoControleLancamentos(
+                _lancamentoRepositoryMock.Object,
+                _contaBancariaRepositoryMock.Object,
+                _rabbitMqServiceMock.Object
+            );
+
+            await Assert.ThrowsExceptionAsync<Exception>(async () => await servicoControleLancamentos.AdicionarLancamentoAsync(lancamento));
+            _contaBancariaRepositoryMock.Verify(repo => repo.AtualizarConta(It.IsAny<ContaBancaria>()), Times.Never);
+            _lancamentoRepositoryMock.Verify(repo => repo.AdicionarLancamentoAsync(It.IsAny<Lancamento>()), Times.Never);
+            _rabbitMqServiceMock.Verify(service => service.EnviarMensagemAsync(It.IsAny<Lancamento>()), Times.Never);
+        }
+
+        [TestMethod]
+        /// <summary>
+        /// Deve lançar uma exceção ao adicionar um lançamento com valor negativo.
+        /// </summary>
+        public async Task AdicionarLancamentoAsync_DeveLancarExcecaoAoAdicionarLancamentoComValorNegativo()
+        {
+            var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = TipoLancamento.Credito, Valor = -50 };
+
+            var servicoControleLancamentos = new ServicoControleLancamentos(
+                _lancamentoRepositoryMock.Object,
+                _contaBancariaRepositoryMock.Object,
+                _rabbitMqServiceMock.Object
+            );
+
+            await Assert.ThrowsExceptionAsync<Exception>(async () => await servicoControleLancamentos.AdicionarLancamentoAsync(lancamento));
+            _contaBancariaRepositoryMock.Verify(repo => repo.AtualizarConta(It.IsAny<ContaBancaria>()), Times.Never);
+            _lancamentoRepositoryMock.Verify(repo => repo.AdicionarLancamentoAsync(It.IsAny<Lancamento>()), Times.Never);
+            _rabbitMqServiceMock.Verify(service => service.EnviarMensagemAsync(It.IsAny<Lancamento>()), Times.Never);
+        }
+
+        [TestMethod]
+        /// <summary>
+        /// Deve lançar uma exceção ao adicionar um lançamento com tipo inválido.
+        /// </summary>
+        public async Task AdicionarLancamentoAsync_DeveLancarExcecaoAoAdicionarLancamentoComTipoInvalido()
+        {
+            var lancamento = new Lancamento { ContaId = Guid.NewGuid(), Tipo = (TipoLancamento)99, Valor = 50 };
+
+            var servicoControleLancamentos = new ServicoControleLancamentos(
+                _lancamentoRepositoryMock.Object,
+                _contaBancariaRepositoryMock.Object,
+                _rabbitMqServiceMock.Object
+            );
+
+            await Assert.ThrowsExceptionAsync<Exception>(async () => await servicoControleLancamentos.AdicionarLancamentoAsync(lancamento));
+            _contaBancariaRepositoryMock.Verify(repo => repo.AtualizarConta(It.IsAny<ContaBancaria>()), Times.Never);
+            _lancamentoRepositoryMock.Verify(repo => repo.AdicionarLancamentoAsync(It.IsAny<Lancamento>()), Times.Never);
+            _rabbitMqServiceMock.Verify(service => service.EnviarMensagemAsync(It.IsAny<Lancamento>()), Times.Never);
+        }
+
+  
+ 
 
     }
 
